@@ -1,0 +1,17 @@
+const fs=require('fs');let p='app/src/main/assets/app.js',s=fs.readFileSync(p,'utf8');
+s=s.replace("const dt=new Date(last.date+'T12:00:00');dt.setMonth(dt.getMonth()+data.vehicle[prefix+'Months']);const nextDate=dt.toISOString().slice(0,10)","const nextDate=L.addMonths(last.date,data.vehicle[prefix+'Months'])");
+s=s.replace('Alertes visibles à l’ouverture de l’application.','Activez les notifications dans les réglages pour recevoir les rappels sur le téléphone.');
+s=s.replace("vignette:'Vignette',other:","vignette:'Vignette',inspection:'Visite technique',other:").replace("vignette:'▣',other:","vignette:'▣',inspection:'✓',other:");
+s=s.replaceAll("['insurance','vignette']","['insurance','vignette','inspection']").replace("'insurance','vignette','other'","'insurance','vignette','inspection','other'");
+s=s.replace("item.coverageEnd=f.get('coverageEnd');","item.coverageEnd=f.get('coverageEnd');item.reminderDate=f.get('reminderDate');");
+s=s.replace("['coverageStart','coverageEnd'].forEach","['coverageStart','coverageEnd','reminderDate'].forEach");
+fs.writeFileSync(p,s);
+p='app/src/main/assets/logic.js';s=fs.readFileSync(p,'utf8').replaceAll("['insurance','vignette']","['insurance','vignette','inspection']").replace("'vignette','other'","'vignette','inspection','other'");s=s.replace("&&(e.photos===undefined", "&&(!e.reminderDate||isDate(e.reminderDate))&&(e.photos===undefined");fs.writeFileSync(p,s);
+p='app/src/main/assets/extras.js';s=fs.readFileSync(p,'utf8').replaceAll("['insurance','vignette']","['insurance','vignette','inspection']");
+s=s.replace("${field('coverageEnd','Dernier jour de validité / renouvellement','date',end)}", "${field('coverageEnd','Dernier jour de validité','date',end)}${field('reminderDate','Date limite de paiement / renouvellement (pour les rappels)','date',e.reminderDate||end)}");
+s=s.replaceAll('Assurance & vignette','Documents & échéances').replace('Assurance, vignette, vidange et pneus : rappel 7 jours avant puis à l’échéance.','Assurance, vignette et visite technique : rappel 1 mois avant, 1 semaine avant, puis le jour de l’échéance. Vidange et pneus : même suivi par date, plus le seuil km.');
+s=s.replace('carburant + assurance + vignette','carburant + assurance + vignette + visite technique').replace('Carburant + assurance + vignette +','Carburant + assurance + vignette + visite technique +');
+s=s.replace('Assurance & vignette réparties','Charges réparties');
+s=s.replace("const days=L.days(L.day(),e.coverageEnd)-1;due=days<=7;", "const deadline=e.reminderDate||e.coverageEnd;const days=L.days(L.day(),deadline)-1;due=L.day()>=L.addMonths(deadline,-1);");
+s=s.replace("${money(e.cost)} payés le ${date(e.date)}`", "${money(e.cost)} payés le ${date(e.date)}<br>Échéance de paiement / renouvellement : ${date(e.reminderDate||e.coverageEnd)}`");
+fs.writeFileSync(p,s);

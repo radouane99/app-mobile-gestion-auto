@@ -1,0 +1,6 @@
+AutoCarnet OCR dependencies (bundled offline; photos are not uploaded):
+Tesseract.js 7.0.0 - https://github.com/naptha/tesseract.js - Apache-2.0
+Tesseract.js-core 7.0.0 - https://github.com/naptha/tesseract.js-core - Apache-2.0
+English / French trained data from @tesseract.js-data, 4.0.0_best_int models,
+https://github.com/naptha/tessdata - Apache-2.0.
+See LICENSE-tesseract.txt, LICENSE-core.txt and third-party license notices.

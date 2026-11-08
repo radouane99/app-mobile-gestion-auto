@@ -1,0 +1,82 @@
+.theme-settings{margin-bottom:18px}.assistant-localized>.row{align-items:flex-start}.assistant-localized>.row h1{flex:1;min-width:0}.assistant-localized>.row>.link{font-size:10px;max-width:95px;flex:none}.assistant-localized[dir=rtl]{text-align:right}.assistant-localized[dir=rtl] .chat-user{margin-left:0;margin-right:25px}.assistant-localized[dir=rtl] .chat-answer{margin-right:0;margin-left:12px}.assistant-localized[dir=rtl] .prompt-chips button{text-align:right}.assistant-localized[dir=rtl] .chat-source{flex-wrap:wrap}.assistant-localized[dir=rtl] .segmented button .ui-icon{margin-right:0;margin-left:4px}.assistant-localized[dir=rtl] .chat-composer .ui-icon{transform:rotate(180deg)}.assistant-facts{margin:12px 0 4px}.assistant-facts>div{display:flex;justify-content:space-between;align-items:baseline;gap:13px;padding:9px 0;border-bottom:1px solid var(--line)}.assistant-facts>div:last-child{border:0}.assistant-facts dt{font-size:11px;color:var(--muted);min-width:0;max-width:50%;line-height:1.6}.assistant-facts dd{margin:0;font-size:12px;font-weight:650;text-align:end;max-width:65%;overflow-wrap:anywhere;line-height:1.65}.chat-bubble .assistant-note{font-size:11px;color:var(--muted);line-height:1.8}.assistant-followups{margin-top:5px}.header-actions{gap:6px}
+html[data-theme=dark]{--ink:#e4edf4;--green:#72d5b1;--bg:#0e1923;--muted:#a7b9c6;--line:#30424f;--shadow:0 8px 28px #00000012;background:#0e1923}
+html[data-theme=dark] body{background:#0e1923;color:#e4edf4}
+html[data-theme=dark] header,html[data-theme=dark] nav{background:#14232f;border-color:#30424f;color:#e4edf4}
+html[data-theme=dark] h1,html[data-theme=dark] h2,html[data-theme=dark] h3,html[data-theme=dark] .empty strong{color:#edf5f8}
+html[data-theme=dark] .brand small,html[data-theme=dark] .muted,html[data-theme=dark] .entry small,html[data-theme=dark] .metric strong span,html[data-theme=dark] .dashboard-footnote,html[data-theme=dark] footer{color:#a8bbc8}
+html[data-theme=dark] .eyebrow{color:#8fb6b7}
+html[data-theme=dark] .card,html[data-theme=dark] .month,html[data-theme=dark] .vehicle-strip,html[data-theme=dark] .dashboard-metrics,html[data-theme=dark] .action-tile,html[data-theme=dark] .action-grid .action-icon,html[data-theme=dark] .quick button,html[data-theme=dark] .secondary,html[data-theme=dark] .proof-card{background:#182a37;border-color:#304552;color:#e4edf4}
+html[data-theme=dark] .avatar{background:#1a2e3d;border-color:#36505f;color:#c3d7e2}
+html[data-theme=dark] .brand b,html[data-theme=dark] .month input{color:#eef5fa}
+html[data-theme=dark] input,html[data-theme=dark] select,html[data-theme=dark] textarea{background:#10222e;border-color:#3c5260;color:#e4edf4}
+html[data-theme=dark] input::placeholder,html[data-theme=dark] textarea::placeholder{color:#8da6b7;opacity:1}
+html[data-theme=dark] label{color:#bed0dc}
+html[data-theme=dark] .primary{background:#1a735c;color:#fff}
+html[data-theme=dark] button:focus-visible,html[data-theme=dark] input:focus-visible,html[data-theme=dark] select:focus-visible,html[data-theme=dark] textarea:focus-visible,html[data-theme=dark] summary:focus-visible{outline-color:#8ce1bf}
+html[data-theme=dark] .link,html[data-theme=dark] .metric .symbol,html[data-theme=dark] .quick button>.ui-icon{color:#8cdbbc}
+html[data-theme=dark] .danger{color:#f5a8a8}
+html[data-theme=dark] .filter button{background:#192c3a;color:#b8cdd8;border-color:#3b5362}
+html[data-theme=dark] .filter button.selected{background:#2e635c;color:#eafff4;border-color:#4a8a7b}
+html[data-theme=dark] .badge,html[data-theme=dark] .note,html[data-theme=dark] .action-icon,html[data-theme=dark] .entry .icon,html[data-theme=dark] .setup-car{background:#203e3b;color:#a7e1c8}
+html[data-theme=dark] .badge.due,html[data-theme=dark] .notice-link,html[data-theme=dark] .incomplete-box,html[data-theme=dark] .incomplete-link{background:#3e3320;border-color:#78613c;color:#f1d39a}
+html[data-theme=dark] .note{line-height:1.75}
+html[data-theme=dark] .vehicle-icon,html[data-theme=dark] .shortcut-grid .action-icon{background:#263f4b;color:#b4d8dd}
+html[data-theme=dark] .vehicle-strip small,html[data-theme=dark] .dashboard-metrics span,html[data-theme=dark] .dashboard-metrics>div>small,html[data-theme=dark] .action-tile small,html[data-theme=dark] .proof-card-info small{color:#a8beca}
+html[data-theme=dark] .assistant-banner{background:#1d3937;border-color:#3c6155;color:#edf4f1}
+html[data-theme=dark] .assistant-banner small{color:#b5d0c3}
+html[data-theme=dark] .assistant-banner>.ui-icon{color:#b6decb}
+html[data-theme=dark] .chat-bubble{background:#192d3a;border-color:#39505e}
+html[data-theme=dark] .chat-user{background:#24433f;border-color:#41695c}
+html[data-theme=dark] .chat-bubble small{color:#9bd4bb}
+html[data-theme=dark] .chat-source,html[data-theme=dark] .prompt-chips button{background:#223a47;border-color:#3a5360;color:#c3e1dd}
+html[data-theme=dark] .chat-composer{background:#152c38;border-color:#497266}
+html[data-theme=dark] .chat-composer textarea{background:transparent}
+html[data-theme=dark] .segmented{background:#101f29}
+html[data-theme=dark] .segmented button{color:#a8c0cd}
+html[data-theme=dark] .segmented button.selected{background:#2b4847;color:#c8f6e1}
+html[data-theme=dark] .form-disclosure,html[data-theme=dark] #coachFields,html[data-theme=dark] .service-editor,html[data-theme=dark] .ocr-panel{background:#142a36;border-color:#3c5260}
+html[data-theme=dark] .form-disclosure summary,html[data-theme=dark] .odometer-disclosure>summary{color:#c2ded6}
+html[data-theme=dark] .saved-receipt{background:#1a3b30;border-color:#4c8970}
+html[data-theme=dark] dialog,html[data-theme=dark] .modalhead{background:#182c39;color:#e6f0f7}
+html[data-theme=dark] .modalhead button{background:#304858;color:#e4f1f3}
+html[data-theme=dark] dialog::backdrop{background:#020b12b8}
+html[data-theme=dark] #proofViewer{background:#132b3a}
+html[data-theme=dark] .proof-link{background:#25453b;border-color:#4a7865;color:#c4eddb}
+html[data-theme=dark] .proof-thumb,html[data-theme=dark] .ocr-crop-frame{background:#122531}
+html[data-theme=dark] .proof-image-error{color:#b6c9d4}
+html[data-theme=dark] .photo>button:first-child{background:#233f4c}
+html[data-theme=dark] .progress,html[data-theme=dark] .bar{background:#304654}
+html[data-theme=dark] .guide-dots span{background:#344d58}
+html[data-theme=dark] .guide-dots span.active{background:#76cfa9}
+html[data-theme=dark] nav button{color:#a5bcca}
+html[data-theme=dark] nav button.active{color:#b8ecd4}
+html[data-theme=dark] nav button.active span{background:#284d43;color:#b9eed5}
+html[data-theme=dark] #toast{background:#dcece8;color:#14372e}
+html[data-theme=dark] .undo-button{background:#23775e;color:#fff;border-color:#23775e}
+html[data-theme=dark] .comparison thead th{color:#9bdabf}
+html[data-theme=dark] .theme-settings{border-color:#4c716b}
+@media(max-width:359px){header{padding-left:14px;padding-right:14px}.logo{width:34px;height:34px}.brand{gap:8px}.brand b{font-size:18px}.brand small{font-size:9px}.avatar{width:34px;height:34px}.avatar .ui-icon{width:19px;height:19px}.header-actions{gap:5px}.assistant-localized>.row{flex-wrap:wrap}.assistant-localized>.row h1{flex-basis:100%;margin-bottom:6px}.assistant-localized>.row>.link{max-width:none;margin-bottom:8px}}
+
+html:not([data-theme=dark]) .dashboard-footnote,html:not([data-theme=dark]) .brand small{color:#5b7280}html:not([data-theme=dark]) .eyebrow{color:#567181}html[data-theme=dark] .action-grid .action-tile:nth-child(2) .action-icon{color:#c1bdf2}html[data-theme=dark] .action-grid .action-tile:nth-child(3) .action-icon{color:#a6d4f5}html[data-theme=dark] .action-grid .action-tile:nth-child(4) .action-icon{color:#f1cc8b}
+
+.assistant-help{border:1px solid var(--line);padding:13px;border-radius:14px;margin:14px 0;background:transparent}.assistant-help>summary{font-size:12px;color:var(--green);font-weight:650;cursor:pointer}.assistant-intro{padding:16px 10px}.assistant-intro .assistant-orb{width:44px;height:44px;margin-bottom:12px}.assistant-intro h2{font-size:18px}.assistant-intro p{margin:10px 0 0}.assistant-help .prompt-chips{margin:10px 0 0}
+.appearance-presets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0}.appearance-preset{display:flex;align-items:center;gap:9px;min-height:48px;border:1px solid var(--line);border-radius:12px;background:transparent;color:var(--ink);padding:10px}.appearance-preset span{width:22px;height:22px;border-radius:50%;flex:none}.appearance-preset[aria-pressed=true]{outline:2px solid var(--green);outline-offset:1px}.appearance-inputs{display:grid;grid-template-columns:1fr 1fr;gap:14px}.appearance-inputs label{min-width:0}.appearance-inputs input{display:block;width:100%;height:48px;padding:5px;margin-top:8px}.appearance-preview{padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--bg);display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin:16px 0}.appearance-example{background:var(--personal-accent,#177b67);color:#fff;border-radius:10px;padding:12px;font-size:12px}.appearance-settings{margin-bottom:18px}
+html[data-custom-colors]{--green:var(--personal-ink)!important;--bg:var(--personal-bg)!important;background:var(--personal-bg)!important}html[data-custom-colors] body{background:var(--personal-bg)!important}html[data-custom-colors] .primary,html[data-custom-colors] #add,html[data-custom-colors] .task-entry>button:first-child{background:var(--personal-accent)!important;border-color:var(--personal-accent)!important;color:#fff!important}html[data-custom-colors] .home-task .action-icon,html[data-custom-colors] .feature-tile .action-icon,html[data-custom-colors] .all-features-button,html[data-custom-colors] nav button.active{background:var(--personal-soft)!important;color:var(--personal-ink)!important}html[data-custom-colors] .budget-hero,html[data-custom-colors] .hero{background:var(--personal-hero)!important}html[data-custom-colors] .link,html[data-custom-colors] .phrase-shortcut{color:var(--personal-ink)!important}
+html[data-theme=dark] .road-check-doc,html[data-theme=dark] .station-card,html[data-theme=dark] .accident-step{background:#182a37;border-color:#304552;color:#e4edf4}
+html[data-theme=dark] .accident-step h3{color:#f5a8a8}
+html[data-theme=dark] .station-card strong{color:#72d5b1}
+html[data-theme=dark] .road-check-pdf-btn{background:#122531;border-color:#4fb6d6;color:#8cdbbc}
+html[data-theme=dark] .road-check-badge.ok{background:#1c4237;color:#93ecc9}
+html[data-theme=dark] .road-check-badge.warn{background:#42331b;color:#f5d491}
+html[data-theme=dark] .road-check-badge.due{background:#471f1f;color:#ffb3b3}
+html[data-theme=dark] .road-check-badge.missing{background:#233542;color:#a5bcca}
+html[data-theme=dark] .accent-card{background:#132531;border-color:#386b82;color:#e4edf4}
+html[data-theme=dark] .sub-box{background:#10202b;border-color:#2c414e;color:#e4edf4}
+html[data-theme=dark] .precode-box{background:#0f2330;border-color:#294c5e;color:#e4edf4}
+html[data-theme=dark] .precode-box summary{color:#67c7e6}
+html[data-theme=dark] .val-green{color:#5ce0b8}
+html[data-theme=dark] .val-amber{color:#f3c669}
+html[data-theme=dark] .val-red{color:#ff8585}
+html[data-theme=dark] .easy-secondary button.pill-flash{background:#153c30;color:#b8f2dc;border-color:#266954}
+html[data-theme=dark] .easy-secondary button.pill-police{background:#122d3d;color:#bae3f7;border-color:#285a75}
+html[data-theme=dark] .easy-secondary button.pill-accident{background:#3d1717;color:#f9c0c0;border-color:#6e2a2a}

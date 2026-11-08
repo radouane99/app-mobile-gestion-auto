@@ -1,0 +1,13 @@
+const fs=require('fs');let p='app/src/main/assets/app.js',s=fs.readFileSync(p,'utf8');
+const replace=(a,b)=>{if(!s.includes(a))throw Error(a);s=s.replace(a,b);};
+replace('...data.entries.map(e=>e.km)','...data.entries.filter(e=>e.hasKm!==false).map(e=>e.km)');
+replace('${date(e.date)} · ${n(e.km)} km','${date(e.date)}${e.hasKm===false?\'\':\' · \'+n(e.km)+\' km\'}');
+replace('note:f.get(\'note\').trim()};','note:f.get(\'note\').trim(),hasKm:f.get(\'km\')!==\'\'&&f.get(\'km\')!==null};');
+replace('...others];if(points.some','...others.filter(e=>e.hasKm!==false)];if(item.hasKm&&points.some');
+replace('if(data.entries.some(e=>(e.date<v.baselineDate','if(data.entries.filter(e=>e.hasKm!==false).some(e=>(e.date<v.baselineDate');
+replace("if($('coveragefields')){const doc=['insurance','vignette'].includes(t);", "const kmOptional=['insurance','vignette'].includes(t);$('km').required=!kmOptional;$('km').placeholder=kmOptional?'Facultatif si inconnu':'';if($('coveragefields')){const doc=kmOptional;");
+replace("function closeForm(){if($('dialog').open){", "function closeForm(){if($('photoViewer')){$('photoViewer').remove();return;}if($('dialog').open){");
+fs.writeFileSync(p,s);
+p='app/src/main/assets/logic.js';s=fs.readFileSync(p,'utf8').replace('...sorted(d)];let inMonth','...sorted(d).filter(e=>e.hasKm!==false)];let inMonth');fs.writeFileSync(p,s);
+p='app/src/main/assets/extras.js';s=fs.readFileSync(p,'utf8').replace('draftEditId=id||null;',"draftEditId=id||null;if((!id||e.hasKm===false)&&['insurance','vignette'].includes(e.type))$('km').value='';");fs.writeFileSync(p,s);
+p='app/src/main/java/ma/autocarnet/ReminderReceiver.java';s=fs.readFileSync(p,'utf8').replace('km=Math.max(km,e.getInt("km"));','if(e.optBoolean("hasKm",true))km=Math.max(km,e.getInt("km"));');fs.writeFileSync(p,s);

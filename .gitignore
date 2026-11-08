@@ -1,0 +1,17 @@
+# Build intermediates & temporary directories
+build/
+tmp/
+tests-backup/
+tests-lock/
+tests-native/
+output/
+
+# Local Android SDK & Private Keystore
+tools/sdk/
+tools/ocr/
+tools/*.zip
+tools/*.tgz
+tools/*.keystore
+
+# Older archived APK builds (keep latest AutoCarnet.apk & AutoCarnet-Radouane.apk)
+dist/AutoCarnet-public-*.apk

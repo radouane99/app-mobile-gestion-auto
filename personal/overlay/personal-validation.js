@@ -1,0 +1,3 @@
+'use strict';
+const publicDataValid=AutoLogic.valid;
+AutoLogic.valid=function(d){if(!publicDataValid(d))return false;if(d.historicalRecords===undefined)return true;const rows=d.historicalRecords;if(!Array.isArray(rows)||rows.length>1000)return false;return new Set(rows.map(x=>x?.id)).size===rows.length&&rows.every(x=>x&&/^[a-zA-Z0-9_-]{1,100}$/.test(x.id)&&['oil','brakes','tires','fuelfilter','repair'].includes(x.type)&&(x.date===null||AutoLogic.isDate(x.date))&&(x.km===null||(Number.isInteger(x.km)&&x.km>=0&&x.km<=9999999))&&x.cost===null&&x.previousOwner===true&&typeof x.text==='string'&&x.text.length<=4000&&Array.isArray(x.photos)&&x.photos.length<=6&&x.photos.every(p=>p&&/^[a-f0-9]{64}\.jpg$/.test(p.id)&&['facture','compteur','pompe','autre'].includes(p.kind)));};

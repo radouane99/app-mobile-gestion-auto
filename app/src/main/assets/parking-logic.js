@@ -1,0 +1,6 @@
+(function(root){'use strict';
+function point(lat,lon){return Number.isFinite(lat)&&Number.isFinite(lon)&&lat>=-90&&lat<=90&&lon>=-180&&lon<=180;}
+function url(p,directions=false){if(!point(p.latitude,p.longitude))return null;const pair=encodeURIComponent(p.latitude.toFixed(7)+','+p.longitude.toFixed(7));return directions?'https://www.google.com/maps/dir/?api=1&destination='+pair+'&travelmode=walking':'https://www.google.com/maps/search/?api=1&query='+pair;}
+function valid(d){const p=d.parking;if(p===undefined||p===null)return true;return p&&typeof p.label==='string'&&p.label.length<=150&&typeof p.note==='string'&&p.note.length<=1000&&typeof p.savedAt==='string'&&!isNaN(Date.parse(p.savedAt))&&((p.latitude===null&&p.longitude===null&&p.accuracy===null&&p.capturedAt===null)||(point(p.latitude,p.longitude)&&(p.accuracy===null||(Number.isFinite(p.accuracy)&&p.accuracy>=0))&&typeof p.capturedAt==='string'&&!isNaN(Date.parse(p.capturedAt))))&&Array.isArray(p.photos)&&p.photos.length<=3&&p.photos.every(x=>x&&/^[a-f0-9]{64}\.jpg$/.test(x.id)&&x.kind==='autre')&&Boolean(p.latitude!==null||p.label.trim()||p.note.trim()||p.photos.length);}
+const api={point,url,valid};root.ParkingLogic=api;if(typeof module!=='undefined')module.exports=api;
+})(typeof window!=='undefined'?window:globalThis);

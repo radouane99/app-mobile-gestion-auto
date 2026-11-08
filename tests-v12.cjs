@@ -1,0 +1,18 @@
+const assert=require('node:assert/strict'),L=require('./app/src/main/assets/logic.js');
+const d=L.blank();d.vehicle.baselineDate='2026-01-01';d.vehicle.baselineKm=100000;
+const entry=(id,type,date,km,cost,extra={})=>({id,type,date,km,cost,note:'',...extra});
+d.entries=[entry('old','oil','2025-12-01',99000,600),entry('oil','oil','2026-02-01',101000,500),entry('fuel','fuel','2026-03-01',102000,100,{liters:8,full:false}),entry('end','reading','2026-04-01',103000,0)];
+assert.equal(L.costPerKm(d).km,3000);assert.equal(L.costPerKm(d).total,600);assert.equal(L.costPerKm(d).value,0.2);assert.equal(L.costPerKm(d).fuelValue,100/3000);assert.equal(L.costPerKm(L.blank()),null);
+d.plans=[{type:'distribution',enabled:true,kmInterval:100000,monthsInterval:60}];assert.equal(L.valid(d),true);assert.equal(L.nextService(d,d.plans[0]),null);
+d.entries.push(entry('belt','distribution','2026-01-31',100100,2000));assert.equal(L.nextService(d,d.plans[0]).date,'2031-01-31');assert.equal(L.nextService(d,d.plans[0]).km,200100);
+assert.equal(L.valid({...d,plans:[{...d.plans[0],kmInterval:0,monthsInterval:0}]}),false);
+assert.equal(L.valid({...d,plans:[d.plans[0],d.plans[0]]}),false);
+const target={id:'r1',title:'Assurance',amount:3000,saved:500,dueDate:'2026-12-31'};assert.equal(L.reserve(target,'2026-10-27').remaining,2500);assert.equal(L.reserve(target,'2026-10-27').months,3);assert.equal(L.reserve(target,'2027-01-01').immediate,2500);assert.equal(L.reserve({...target,saved:4000},'2026-10-27').monthly,0);
+d.reserves=[target];assert.equal(L.valid(d),true);assert.equal(L.valid({...d,reserves:[{...target,amount:-2}]}),false);
+const front=entry('tf','tires','2026-04-01',103000,1500,{tire:{position:'front',brand:'Test',size:'195/65 R15',dot:'1225'}}),rear=entry('tr','tires','2026-02-01',101000,1400,{tire:{position:'rear',brand:'Test',size:'195/65 R15',dot:''}});d.entries.push(front,rear);assert.equal(L.tireLast(d,'front').id,'tf');assert.equal(L.tireLast(d,'rear').id,'tr');assert.equal(L.tireLast(d,'spare'),null);
+const all=entry('all','tires','2026-05-01',104000,3000,{tire:{position:'all',brand:'Test',size:'',dot:''}});d.entries.push(all);assert.equal(L.tireLast(d,'rear').id,'all');assert.equal(L.tireLast(d,'spare'),null);
+const incident=entry('inc','incident','2026-05-01',104000,0,{incident:{status:'open',severity:'watch',resolvedDate:'',resolution:''}});d.entries.push(incident);assert.equal(L.valid(d),true);assert.equal(L.valid({...d,entries:[{...incident,cost:100}]}),false);
+const check=entry('check','checkup','2026-05-01',104000,0,{checks:Object.fromEntries(L.checkItems.map(k=>[k,'ok']))});assert.equal(L.checkComplete(check),true);assert.equal(L.checkComplete({...check,checks:{...check.checks,pressure:'unchecked'}}),false);assert.equal(L.checkComplete({...check,checks:{...check.checks,pressure:'attention'}}),true);
+assert.equal(L.valid({...d,monthlyCheck:{enabled:true,day:29}}),false);assert.equal(L.valid({...d,tireProfile:{size:'',note:'',coldFront:2.2,coldRear:null}}),true);assert.equal(L.valid({...d,tireProfile:{size:'',note:'',coldFront:-1,coldRear:null}}),false);
+console.log('30 contrôles v1.2 réussis : coût/km cohérent, plans, réserve, essieux, incidents et checklist.');
+const rotated={...d,entries:[rear,front,entry('swap','rotation','2026-04-02',103050,0,{rotationSwap:true})]};assert.equal(L.tireLast(rotated,'front').id,'tr');assert.equal(L.tireLast(rotated,'rear').id,'tf');

@@ -1,0 +1,271 @@
+{
+  "version": 1,
+  "setupComplete": true,
+  "guideSeen": true,
+  "personalEdition": "radouane-1",
+  "vehicle": {
+    "name": "Dacia Logan Phase 2 Prestige",
+    "plate": "",
+    "fuel": "Diesel / Gasoil",
+    "baselineKm": 64084,
+    "baselineDate": "2026-10-29",
+    "oilInterval": 10000,
+    "oilMonths": 12,
+    "tireInterval": 40000,
+    "tireMonths": 60
+  },
+  "entries": [
+    {
+      "id": "compteur-photo-20261029",
+      "type": "reading",
+      "date": "2026-10-29",
+      "km": 64084,
+      "hasKm": true,
+      "cost": 0,
+      "note": "Lecture visible sur la photo fournie le 29/10/2026 : 64 084 km. Date de prise à confirmer si différente.",
+      "photos": [
+        {
+          "id": "47d27e0f30517e36a5e883ba5b17017eef162aaca2dee81957339baf291c0332.jpg",
+          "kind": "compteur"
+        }
+      ]
+    }
+  ],
+  "historicalRecords": [
+    {
+      "id": "carnet-oil-8000",
+      "type": "oil",
+      "km": 8000,
+      "date": null,
+      "dateConfirmed": false,
+      "text": "1re vidange : filtre à air + huile moteur. Date, marque et montant non renseignés.",
+      "cost": null,
+      "photos": [
+        {
+          "id": "d632e6c3cbc5c2565623ec61c0496a7a18a374980656989ef4c7dfa9d6ce6317.jpg",
+          "kind": "autre"
+        }
+      ],
+      "useForReminders": false,
+      "previousOwner": true
+    },
+    {
+      "id": "carnet-oil-14000",
+      "type": "oil",
+      "km": 14000,
+      "date": null,
+      "dateConfirmed": false,
+      "text": "2e vidange : filtre à air + huile moteur. Date et montant non renseignés.",
+      "cost": null,
+      "photos": [
+        {
+          "id": "d632e6c3cbc5c2565623ec61c0496a7a18a374980656989ef4c7dfa9d6ce6317.jpg",
+          "kind": "autre"
+        }
+      ],
+      "useForReminders": false,
+      "previousOwner": true
+    },
+    {
+      "id": "carnet-brakes-25000",
+      "type": "brakes",
+      "km": 25000,
+      "date": null,
+      "dateConfirmed": false,
+      "text": "Plaquettes de frein. Date, essieu et montant non renseignés.",
+      "cost": null,
+      "photos": [
+        {
+          "id": "d632e6c3cbc5c2565623ec61c0496a7a18a374980656989ef4c7dfa9d6ce6317.jpg",
+          "kind": "autre"
+        }
+      ],
+      "useForReminders": false,
+      "previousOwner": true
+    },
+    {
+      "id": "carnet-oil-20000",
+      "type": "oil",
+      "km": 20000,
+      "date": null,
+      "dateConfirmed": false,
+      "text": "3e vidange : filtre à air + huile moteur. Lecture du kilométrage raturé à confirmer (semble 20 000 km).",
+      "cost": null,
+      "photos": [
+        {
+          "id": "d632e6c3cbc5c2565623ec61c0496a7a18a374980656989ef4c7dfa9d6ce6317.jpg",
+          "kind": "autre"
+        }
+      ],
+      "useForReminders": false,
+      "kmConfirmed": false,
+      "previousOwner": true
+    },
+    {
+      "id": "carnet-oil-27000",
+      "type": "oil",
+      "km": 27000,
+      "date": null,
+      "dateConfirmed": false,
+      "text": "4e vidange : filtre à air + huile moteur. Date et montant non renseignés.",
+      "cost": null,
+      "photos": [
+        {
+          "id": "d632e6c3cbc5c2565623ec61c0496a7a18a374980656989ef4c7dfa9d6ce6317.jpg",
+          "kind": "autre"
+        }
+      ],
+      "useForReminders": false,
+      "previousOwner": true
+    },
+    {
+      "id": "carnet-tires-33800",
+      "type": "tires",
+      "km": 33800,
+      "date": "2023-03-27",
+      "dateConfirmed": true,
+      "text": "Changement des pneus avant, Goodyear. Dimensions et montant non renseignés.",
+      "cost": null,
+      "photos": [
+        {
+          "id": "d632e6c3cbc5c2565623ec61c0496a7a18a374980656989ef4c7dfa9d6ce6317.jpg",
+          "kind": "autre"
+        }
+      ],
+      "useForReminders": false,
+      "previousOwner": true
+    },
+    {
+      "id": "carnet-fuelfilter-34400",
+      "type": "fuelfilter",
+      "km": 34400,
+      "date": "2023-04-08",
+      "dateConfirmed": true,
+      "text": "Changement du filtre à gasoil. Montant non renseigné.",
+      "cost": null,
+      "photos": [
+        {
+          "id": "d632e6c3cbc5c2565623ec61c0496a7a18a374980656989ef4c7dfa9d6ce6317.jpg",
+          "kind": "autre"
+        }
+      ],
+      "useForReminders": false,
+      "previousOwner": true
+    },
+    {
+      "id": "carnet-oil-35680",
+      "type": "oil",
+      "km": 35680,
+      "date": "2023-04-28",
+      "dateConfirmed": true,
+      "text": "Vidange Castrol 5W40 + filtre à air + filtre à huile. Montant non renseigné.",
+      "cost": null,
+      "photos": [
+        {
+          "id": "d632e6c3cbc5c2565623ec61c0496a7a18a374980656989ef4c7dfa9d6ce6317.jpg",
+          "kind": "autre"
+        }
+      ],
+      "useForReminders": false,
+      "previousOwner": true
+    },
+    {
+      "id": "carnet-oil-43925",
+      "type": "oil",
+      "km": 43925,
+      "date": "2023-09-28",
+      "dateConfirmed": true,
+      "text": "Vidange Castrol 5W40 + filtre à air + filtre à huile. Montant non renseigné.",
+      "cost": null,
+      "photos": [
+        {
+          "id": "899d0219afe13a889442b0d03a2ab7a82dfbfb3c1271d1988207afe367446498.jpg",
+          "kind": "autre"
+        }
+      ],
+      "useForReminders": false,
+      "previousOwner": true
+    },
+    {
+      "id": "carnet-oil-52167",
+      "type": "oil",
+      "km": 52167,
+      "date": "2024-04-28",
+      "dateConfirmed": true,
+      "text": "Vidange Castrol 5W40 + filtre à air + filtre à huile. Date confirmée par Radouane : 28/04/2024. Prix non repris : entretien de l’ancien propriétaire.",
+      "cost": null,
+      "photos": [
+        {
+          "id": "899d0219afe13a889442b0d03a2ab7a82dfbfb3c1271d1988207afe367446498.jpg",
+          "kind": "autre"
+        }
+      ],
+      "useForReminders": false,
+      "previousOwner": true
+    },
+    {
+      "id": "carnet-oil-62058",
+      "type": "oil",
+      "km": 62058,
+      "date": "2025-02-11",
+      "dateConfirmed": true,
+      "text": "Vidange à 62 058 km. Viscosité corrigée par Radouane : 5W30 (annotation 10W40 du carnet erronée). Filtres à huile et à air selon le carnet. Ancien propriétaire ; hors dépenses personnelles.",
+      "cost": null,
+      "photos": [
+        {
+          "id": "899d0219afe13a889442b0d03a2ab7a82dfbfb3c1271d1988207afe367446498.jpg",
+          "kind": "autre"
+        }
+      ],
+      "useForReminders": false,
+      "previousOwner": true
+    },
+    {
+      "id": "oil-previous-owner-20260928",
+      "type": "oil",
+      "km": null,
+      "kmConfirmed": false,
+      "date": "2026-09-28",
+      "dateConfirmed": true,
+      "text": "Vidange Total 5W30 + filtre à huile uniquement. Huile renouvelée après immobilisation prolongée au garage. Information transmise par Radouane ; kilométrage et prix inconnus. Entretien de l’ancien propriétaire, hors dépenses personnelles.",
+      "cost": null,
+      "previousOwner": true,
+      "photos": [],
+      "useForReminders": false
+    }
+  ],
+  "personalVehicle": {
+    "purchaseKm": 62500,
+    "purchaseDate": "2026-09-30",
+    "historyOwner": "previous"
+  },
+  "coachProfile": {
+    "enabled": true,
+    "vehicleName": "Dacia Logan Phase 2 Prestige",
+    "make": "Dacia",
+    "model": "Logan",
+    "phase": "Phase 2",
+    "finish": "Prestige",
+    "forwardGears": 5,
+    "reverseGear": true,
+    "year": 2021,
+    "engine": "1.5 dCi",
+    "gearbox": "Manuelle",
+    "powerHp": null,
+    "claimedPowerHp": 90,
+    "technicalType": "",
+    "fiscalCv": 6,
+    "cylinders": 4,
+    "seats": 5,
+    "primaryUsage": "city",
+    "reportedKm": 64084,
+    "referenceSince": "",
+    "catalogConfirmed": false,
+    "bounds": {
+      "city": null,
+      "highway": null,
+      "road": null,
+      "mixed": null
+    }
+  }
+}

@@ -1,0 +1,4 @@
+const fs=require('fs');const base='app/src/main/';let p=base+'assets/brand.svg',s=fs.readFileSync(p,'utf8');s=s.replace(' <path fill="#8be8be"',' <g transform="translate(54 54) scale(.88) translate(-54 -54)">\n <path fill="#8be8be"').replace('cx="78" cy="29"','cx="74" cy="30"').replace('</svg>',' </g>\n</svg>');fs.writeFileSync(p,s);
+for(const name of ['ic_foreground.xml','ic_notification.xml']){p=base+'res/drawable/'+name;s=fs.readFileSync(p,'utf8').replace(' <path',' <group android:pivotX="54" android:pivotY="54" android:scaleX="0.88" android:scaleY="0.88">\n <path'); // only one group around all paths
+s=s.replaceAll('</group>','');const groups=(s.match(/<group /g)||[]).length;if(groups>1){let first=true;s=s.replace(/ <group [^>]+>\n/g,x=>{if(first){first=false;return x;}return '';});}
+s=s.replace('M73,29a5','M69,30a5').replace('</vector>',' </group>\n</vector>');fs.writeFileSync(p,s);}

@@ -1,0 +1,15 @@
+const fs=require('fs');let p='app/src/main/assets/app.js',s=fs.readFileSync(p,'utf8');
+const sub=(a,b)=>{if(!s.includes(a))throw Error(a);s=s.replace(a,b);};
+sub("other:'Autre dépense',reading:'Relevé compteur'","other:'Autre dépense',reading:'Relevé compteur',distribution:'Distribution',brakes:'Freins',battery:'Batterie',airfilter:'Filtre à air',fuelfilter:'Filtre à carburant',cabinfilter:'Filtre habitacle',rotation:'Permutation pneus',alignment:'Parallélisme',incident:'Incident / voyant',checkup:'Contrôle mensuel'");
+sub("other:'▤',reading:'↗'","other:'▤',reading:'↗',distribution:'⚙',brakes:'◉',battery:'▣',airfilter:'≋',fuelfilter:'◈',cabinfilter:'≋',rotation:'⇄',alignment:'↔',incident:'!',checkup:'✓'");
+sub("['stats','▥','Bilan']","['stats','▥','Bilan'],['garage','◇','Garage']");
+sub("if(page==='home'||page==='maintenance')appendDocuments();}","if(page==='home'||page==='maintenance')appendDocuments();renderAdvanced();}");
+sub("Version 1.1","Version 1.2");
+sub("installExtras(e,id);switchType(e.type);","installExtras(e,id);installAdvancedFields(e);switchType(e.type);");
+sub("cost:t==='reading'?0:Number(f.get('cost'))","cost:['reading','incident','checkup'].includes(t)?0:Number(f.get('cost'))");
+sub("item.photos=draftPhotos.map(p=>({...p}));","item.photos=draftPhotos.map(p=>({...p}));readAdvancedFields(item,f);");
+sub("});}} \nfunction closeForm", "});}switchAdvancedFields(t);} \nfunction closeForm");
+sub("${e.type==='reading'?'—':money(e.cost)}","${['reading','incident','checkup'].includes(e.type)?'—':money(e.cost)}");
+sub("${e.photos?.length?", "${e.incident?`<small>${e.incident.status==='resolved'?'✓ Résolu':'● Ouvert'} · ${esc(e.incident.severity)}</small>`:''}${e.type==='checkup'?`<small>${L.checkComplete(e)?'✓ Contrôle terminé':'Contrôle partiel'}</small>`:''}${e.photos?.length?");
+sub("if(page==='stats')appendBudget();", "if(page==='stats'){appendBudget();appendCostKm();}");
+fs.writeFileSync(p,s);

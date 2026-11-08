@@ -1,0 +1,1 @@
+const fs=require('fs'),p='app/src/main/java/ma/autocarnet/MainActivity.java';let s=fs.readFileSync(p,'utf8');s=s.replace(/(@JavascriptInterface public (?:String|boolean|void) (\w+)\([^)]*\)\{)/g,(all,head,name)=>['lockStatus','configureLock','lockNow'].includes(name)?all:head+'requireUnlocked();');fs.writeFileSync(p,s);

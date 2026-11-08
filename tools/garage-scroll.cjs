@@ -1,0 +1,1 @@
+const fs=require('fs'),p='app/src/main/assets/advanced.js';let s=fs.readFileSync(p,'utf8');s=s.replace("[garageTab])();}\n  if(page==='settings')", "[garageTab])();$('main').querySelector('.filter .selected')?.scrollIntoView({block:'nearest',inline:'center'});}\n  if(page==='settings')");fs.writeFileSync(p,s);

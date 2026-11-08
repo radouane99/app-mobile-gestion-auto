@@ -1,0 +1,3 @@
+'use strict';
+const detailedReadPhoto=readPhotoOcr;
+readPhotoOcr=function(...args){detailedReadPhoto(...args);const p=$('ocrPanel');if(!p||p.dataset.refined)return;p.dataset.refined='true';const crop=p.querySelector('.fields');foldTrip(tripText('Réglages précis du recadrage','Precise crop settings','إعدادات القص الدقيقة'),[crop],'ocrCropOptions');const text=$('ocrText'),label=text.previousElementSibling,keep=$('keepOcrText').closest('label'),update=keep.nextElementSibling,recalc=update.nextElementSibling;foldTrip(tripText('Texte reconnu & recherche','Recognized text & search','النص المقروء والبحث'),[label,text,keep,update,recalc],'ocrTextOptions');const proposals=$('ocrSuggestions');$('ocrStatus').after(proposals);};
